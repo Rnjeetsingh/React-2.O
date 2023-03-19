@@ -1,0 +1,26 @@
+input{
+   display: block;
+   width: 20%;
+   height: 40px;
+   margin-left: 40%;
+   margin-bottom: 15px;
+   border: 3px solid blueviolet;
+   background: palevioletred;
+   border-radius: 5px;
+   text-align: center;
+   color: black;
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.bttur{
+    padding: 5px;
+    background: palevioletred;
+    border: 3px solid blueviolet;
+    color: black;
+    margin-left: 40px;
+    margin-bottom: 18px;
+}
+.bttur:hover{
+    background: coral;
+}

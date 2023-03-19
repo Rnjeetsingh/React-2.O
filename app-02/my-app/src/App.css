@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.dataMap{
+  display: flex;
+  justify-content: center;
+}
 
 
 .App-header {

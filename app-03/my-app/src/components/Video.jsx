@@ -11,7 +11,7 @@ const Video = ({title,img,view,channel,time,bg,verified,children}) => {
       <img src={img} alt="Iron Man"/>
       <h3>{title}</h3>
       <p style={{backgroundColor:bg}}>Channel : {channel} {verified ? '✅' : null}</p>
-      <p>View : {view} . <spane>{time}</spane></p>
+      <p>View : {view} . <span>{time}</span></p>
       {children}
     </div>
   )

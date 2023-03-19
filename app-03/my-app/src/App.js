@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Video from "./components/Video";
+import obj from "./components/Data";
+import PlayButton from "./components/PlayButton";
+import { useState } from "react";
+import AddVideos from "./components/AddVideos";
+import VideoList from "./components/VideoList";
+
+// Topics To Learn :
+// ------------------------------------------------
+// using map to traverse the array of object
+// using onClick event function
+// sendig custom function through props
+// importentc of keys in react
+// events bubling 
+// event handlings
+// useState Hook learn
+// state handling
+// Spred Opretor
+// Data Sending Child to parents through the props
+// -------------------------------------------------
 
 function App() {
+
+
+  const [videos,setVideos] = useState(obj);
+
+  const addVideos = (video) => {
+    setVideos([
+      ...videos,
+      {...video, id: videos.length + 1}
+    ])
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Youtube Thumbnail</h1>
+      <AddVideos addVideos={addVideos}></AddVideos>
+     <VideoList videos={videos}></VideoList>
     </div>
   );
 }
